@@ -1,0 +1,24 @@
+<div ng-controller="NewSurveyCtrl">
+	<div ng-repeat="question in questions">
+	<span> {{question.text}} </span>
+	<div ng-if="question.type == 'input'">
+		<input type="text"/>
+	</div>
+	<div ng-if="question.type == 'choose'">
+		<ul ng-repeat="option in question.options">
+			<li><input  type="radio" name="quesion_{{question.id}}"/>{{option.text}}</li>
+		</ul>
+	</div>
+	</div>
+</div>
+<div>
+
+	text:
+	type:
+	<select>
+		<option value="input">input</option>
+		<option value="choose">choose</option>
+	</select>
+
+
+</div>

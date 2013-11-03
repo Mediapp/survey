@@ -9,6 +9,25 @@ angular.module('myApp.controllers', []).
   .controller('MyCtrl2', [function() {
 
   }])
+  .controller('NewSurveyCtrl', ['$scope', function($scope) {
+	$scope.questions = [
+	    {
+	    type:"choose",
+	    id:"1",
+	    text:'you like witch game?',
+	    options:
+	    	[
+	    	{text:"Final Fansity"},
+	    	{text:"Fallout"},
+	    	{text:"BalderGate"}
+	    	],
+		},
+	    {
+	    type:"input",
+	    id:"2",
+	    text:'build an angular app'
+		}];
+  }])
   .controller('TodoCtrl', ['$scope', function($scope) {
 	$scope.todos = [
 	    {text:'learn angular', done:true},
