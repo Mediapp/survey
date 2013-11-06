@@ -9,6 +9,9 @@ angular.module('myApp.controllers', []).
   .controller('MyCtrl2', [function() {
 
   }])
+  .controller('FormCtrl', [function() {
+
+  }])
   .controller('NewSurveyCtrl', ['$scope', function($scope) {
 	$scope.questions = [
 	    {
